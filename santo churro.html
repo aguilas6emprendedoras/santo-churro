@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Santo Churro</title>
+    <style>
+        body {
+            font-family: 'Arial Black', Gadget, sans-serif;
+            margin: 0;
+            background-color: #f5f5dc;
+            color: #333;
+            overflow-x: hidden;
+        }
+
+        .top-banner {
+            width: 100%;
+            line-height: 0;
+        }
+
+        .top-banner img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 5%;
+            background: #f5f5dc;
+        }
+
+        .social-icons img {
+            width: 20px;
+            margin-right: 5px;
+        }
+
+        .logo-mid img {
+            width: 120px;
+        }
+
+        .btn-sucursales {
+            border: 1px solid #ccc;
+            padding: 5px 15px;
+            border-radius: 20px;
+            text-decoration: none;
+            color: #333;
+            font-size: 12px;
+            font-family: sans-serif;
+        }
+
+        .hero {
+            background-color: #86895d;
+            text-align: center;
+            padding: 40px 20px 80px 20px;
+            color: #fff;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin: 0;
+            line-height: 0.9;
+            text-transform: uppercase;
+        }
+
+        .hero p {
+            margin-top: 10px;
+            font-size: 1.2rem;
+            font-family: serif;
+        }
+
+        .main-sandwiches {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-top: -60px;
+            padding: 0 10px;
+            flex-wrap: wrap;
+        }
+
+        .main-sandwiches img {
+            width: 30%;
+            min-width: 100px;
+            max-width: 250px;
+            height: auto;
+        }
+
+        .intro-text {
+            max-width: 800px;
+            margin: 60px auto 20px auto;
+            text-align: center;
+            padding: 0 20px;
+        }
+
+        .intro-text h2 {
+            color: #86895d;
+            font-size: 2rem;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+        }
+
+        .intro-text p {
+            font-family: sans-serif;
+            font-size: 1.1rem;
+            line-height: 1.6;
+            color: #555;
+            margin-bottom: 15px;
+        }
+
+        .menu-title {
+            text-align: center;
+            margin: 40px 0;
+            position: relative;
+        }
+
+        .menu-title h2 {
+            display: inline-block;
+            font-size: 1.5rem;
+            color: #fff;
+            background: #86895d;
+            padding: 5px 20px;
+            border-radius: 5px;
+            text-transform: uppercase;
+        }
+
+        .grid-menu {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+            padding: 20px 5%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .card {
+            background: #fff;
+            border: 1px solid #eee;
+            border-radius: 15px;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+        }
+
+        .card img {
+            width: 100%;
+            max-width: 220px;
+            height: auto;
+        }
+
+        .card h3 {
+            color: #D21A21;
+            font-size: 1.1rem;
+            margin: 15px 0 5px 0;
+        }
+
+        .card p {
+            font-size: 0.85rem;
+            font-family: sans-serif;
+            color: #666;
+            min-height: 40px;
+        }
+
+        .price {
+            background: #a18262;
+            color: #fff;
+            display: inline-block;
+            padding: 5px 15px;
+            border-radius: 8px;
+            font-size: 1.2rem;
+            margin: 10px 0;
+        }
+
+        .footer-info {
+            background-color: #86895d;
+            color: #fff;
+            text-align: center;
+            padding: 40px 20px;
+            margin-top: 60px;
+        }
+
+        .btn-ordenar {
+            background-color: #fff;
+            color: #86895d;
+            display: inline-block;
+            padding: 12px 30px;
+            border-radius: 30px;
+            font-size: 1.2rem;
+            text-decoration: none;
+            margin-bottom: 30px;
+            font-family: sans-serif;
+            font-weight: bold;
+        }
+
+        .footer-text {
+            font-size: 1.2rem;
+            max-width: 900px;
+            margin: 0 auto;
+            line-height: 1.4;
+            text-transform: uppercase;
+        }
+
+        .contact-footer {
+            padding: 40px 5%;
+            background-color: #f5f5dc;
+            border-top: 2px solid #86895d;
+        }
+
+        .contact-top {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-bottom: 20px;
+        }
+
+        .ig-link {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            color: #000;
+            font-family: sans-serif;
+            font-weight: bold;
+        }
+
+        .ig-link img {
+            width: 25px;
+            margin-right: 10px;
+        }
+
+        .footer-logo {
+            width: 80px;
+            height: auto;
+            margin-left: 10px;
+            vertical-align: middle;
+        }
+
+        .app-text {
+            font-family: sans-serif;
+            font-weight: 900;
+            text-transform: uppercase;
+            font-size: 1.1rem;
+        }
+
+        .legal-links {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            margin: 20px 0;
+            font-family: sans-serif;
+            font-size: 0.9rem;
+            color: #000;
+        }
+
+        .copyright-text {
+            text-align: center;
+            font-family: sans-serif;
+            font-size: 0.85rem;
+            line-height: 1.5;
+            max-width: 700px;
+            margin: 20px auto;
+        }
+
+        .phone-call {
+            text-align: center;
+            font-family: sans-serif;
+            font-size: 0.95rem;
+            margin: 20px 0;
+        }
+
+        .phone-call a {
+            color: #000;
+            text-decoration: underline;
+        }
+
+        @media (max-width: 600px) {
+            .hero h1 { font-size: 2rem; }
+            header { flex-direction: column; gap: 10px; background: #f5f5dc; }
+            .main-sandwiches { margin-top: -40px; }
+            .main-sandwiches img { width: 45%; }
+            .legal-links { flex-direction: column; align-items: center; gap: 10px; }
+            .contact-top { flex-direction: column; gap: 15px; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="top-banner">
+        <img src="imag2/banner12.jpg" alt="">
+    </div>
+
+    <header>
+        <div class="social-icons"></div>
+        <div class="logo-mid"></div>
+    </header>
+
+    <section class="hero">
+        <h1>SANTO CHURRO</h1>
+    </section>
+
+    <div class="main-sandwiches">
+        <img src="imag2/churros333.png" alt="Churros 333">
+        <img src="imag2/churros777.png" alt="Churros 777">
+    </div>
+
+    <article class="intro-text">
+        <h2>Santo churro</h2>
+        <p>En santo churro convertimos un antojo clásico en una experiencia especial, destaca por su textura crujiente y sabor en cada mordida.</p>
+        <p>La combinación de recetas tradicionales con una presentación unica y dip irresistibles los vuelven unicos y perfectos para compartir.</p>
+        <p>En Santo churro no solo vendemos churros, vendemos momentos dulces, originales y llenos de sabor.</p>
+    </article>
+
+    <div class="menu-title">
+        <h2>CONOCE NUESTRO MENÚ</h2>
+    </div>
+
+    <div class="grid-menu">
+        <div class="card">
+            <img src="imag2/churrosconchocolate.jpg" alt="">
+            <h3>CHURROS CON CHOCOLATE</h3>
+            <p>Churros acompañados de un delicioso chocolate cremoso, perfecto para quienes aman el sabor clásico y dulce.</p>
+            <div class="price">$30.00</div>
+        </div>
+
+        <div class="card">
+            <img src="imag2/churrosconcajeta.jpg" alt="">
+            <h3>CHURROS CON CAJETA</h3>
+            <p>Churros doraditos cubiertos con suave cajeta ideal para disfrutar un toque dulce y caramelizado.</p>
+            <div class="price">$30.00</div>
+        </div>
+
+        <div class="card">
+            <img src="imag2/churrosconlechera.jpg" alt="">
+            <h3>CHURROS CON LECHERA</h3>
+            <p>Churros crujientes con el irresistible sabor de la lechera, una combinación cremosa y dulce.</p>
+            <div class="price">$30.00</div>
+        </div>
+    </div>
+
+    <footer class="footer-info">
+        <div class="btn-ordenar">Disfruta de nuestros churros</div>
+        <p class="footer-text">no dejes pasar el antojo. tenemos churros calientitos, suaves por dentro y crujientes por fuera.</p>
+    </footer>
+
+    <section class="contact-footer">
+        <div class="contact-top">
+            <a href="https://www.instagram.com/santo_churroof?igsh=dndtOWt4M2xld3R0" class="ig-link" target="_blank">
+                <img src="imag2/insta.jpg" alt="Instagram">
+            </a>
+            SIGUENOS EN REDES SOCIALES :)
+            <img src="imag2/logo67.png" alt="Logo Santo Churro" class="footer-logo">
+        </div>
+
+        <div class="legal-links">COMPAÑÍA</div>
+
+        <p class="copyright-text">
+        ©2023-2026 Santo Churro COLEGIO DE BACHILLERES DEL ESTADO DE CHIHUAHUA PLANTEL 6, Ciudad Juárez Chihuahua - EMPRENDIMIENTO 623. </p>
+    </section>
+
+</body>
+</html>
